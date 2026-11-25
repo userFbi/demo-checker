@@ -137,6 +137,27 @@
 .faq-a-pad{padding:0 45px 26px 0}
 @media(max-width:760px){.faq-a-pad{padding-right:20px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+/* ===== Comparison scorecard (compact) ===== */
+.comparison.section{padding:80px 0}
+.comparison .section-top{margin-bottom:30px}
+.comparison .section-top h2{font-size:clamp(44px,5vw,68px)}
+.vs-legend{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:14px;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.vs-legend span{display:inline-flex;align-items:center;gap:9px}
+.vs-dot{width:10px;height:10px;border-radius:50%;border:1px solid #6b6556;display:inline-block}.vs-dot.us{background:var(--gold);border-color:var(--gold)}
+.vs{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.vs-tile{background:var(--bg-a);border:1px solid var(--card-line);padding:20px 20px 8px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.vs-tile:before{content:"";position:absolute;left:0;top:0;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.vs-tile:hover{border-color:rgba(212,168,62,.5);transform:translateY(-4px)}.vs-tile:hover:before{transform:scaleX(1)}
+.vs-ico{display:block;width:26px;height:26px;color:var(--gold);margin-bottom:14px}.vs-ico svg{width:100%;height:100%}
+.vs-tile h3{font:700 24px/1.05 'Barlow Condensed',sans-serif;letter-spacing:.3px;text-transform:uppercase;margin:0 0 14px;color:var(--paper);min-height:50px}
+.vs-line{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:11px 0;border-top:1px solid var(--card-line)}
+.vs-k{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.vs-v{display:inline-flex;align-items:center;gap:7px;font-size:13px;letter-spacing:1px;text-transform:uppercase;font-weight:800}
+.vs-us .vs-v{color:var(--gold)}
+.vs-them .vs-v{color:#7d7767}
+.vs-check{width:18px;height:18px;border-radius:50%;background:var(--gold);color:#090909;display:grid;place-items:center}.vs-check svg{width:10px;height:10px}
+@media(max-width:1050px){.vs{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.comparison.section{padding:60px 0}.vs{grid-template-columns:1fr 1fr}.vs-tile{padding:16px 14px 4px}.vs-tile h3{font-size:21px;min-height:44px}.vs-tile:last-child{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -231,10 +252,9 @@
 
 <section class="section comparison"><div class="wrap">
 <div class="section-top"><div><div class="eyebrow">The championship standard</div><h2 class="display">Built different.<br><span class="gold">Built to win.</span></h2></div><p>Every detail matters. See the features that make Championship Chains a standout partner for your next award.</p></div>
-<div class="compare-grid">
-<article class="compare-card best"><div class="eyebrow">The championship standard</div><h3>Championship Chains</h3><p>Premium quality. Elite results.</p><ul><li>Fully custom designs <b>✓ YES</b></li><li>Multi-layer design <b>✓ YES</b></li><li>Premium brass <b>✓ YES</b></li><li>Custom finishes <b>✓ YES</b></li><li>Design support <b>✓ YES</b></li></ul></article>
-<article class="compare-card"><div class="eyebrow">Other options</div><h3>Typical alternatives</h3><p>Not every award is made to the same standard.</p><ul><li>Fully custom designs <b>Limited</b></li><li>Multi-layer design <b>Varies</b></li><li>Premium brass <b>Varies</b></li><li>Custom finishes <b>Limited</b></li><li>Design support <b>Varies</b></li></ul></article>
-</div></div></section>
+<div class="vs-legend"><span><i class="vs-dot us"></i>Championship Chains</span><span><i class="vs-dot"></i>Typical alternatives</span></div>
+<div class="vs"><div class="vs-tile"><span class="vs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></svg></span><h3>Fully custom designs</h3><div class="vs-line vs-us"><span class="vs-k">Us</span><span class="vs-v"><span class="vs-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>Yes</span></div><div class="vs-line vs-them"><span class="vs-k">Others</span><span class="vs-v">Limited</span></div></div><div class="vs-tile"><span class="vs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span><h3>Multi-layer design</h3><div class="vs-line vs-us"><span class="vs-k">Us</span><span class="vs-v"><span class="vs-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>Yes</span></div><div class="vs-line vs-them"><span class="vs-k">Others</span><span class="vs-v">Varies</span></div></div><div class="vs-tile"><span class="vs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Premium brass</h3><div class="vs-line vs-us"><span class="vs-k">Us</span><span class="vs-v"><span class="vs-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>Yes</span></div><div class="vs-line vs-them"><span class="vs-k">Others</span><span class="vs-v">Varies</span></div></div><div class="vs-tile"><span class="vs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 6.3L20.5 12l-6.3 2.7L12 21l-2.2-6.3L3.5 12l6.3-2.7z"/></svg></span><h3>Custom finishes</h3><div class="vs-line vs-us"><span class="vs-k">Us</span><span class="vs-v"><span class="vs-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>Yes</span></div><div class="vs-line vs-them"><span class="vs-k">Others</span><span class="vs-v">Limited</span></div></div><div class="vs-tile"><span class="vs-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9.5L4 20.5z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span><h3>Design support</h3><div class="vs-line vs-us"><span class="vs-k">Us</span><span class="vs-v"><span class="vs-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>Yes</span></div><div class="vs-line vs-them"><span class="vs-k">Others</span><span class="vs-v">Varies</span></div></div></div>
+</div></section>
 
 <section class="section stories" id="stories"><div class="wrap">
 <div class="section-top"><div><div class="eyebrow">Trusted by champions</div><h2 class="display">Real feedback.<br><span class="gold">Real champions.</span></h2></div><p>See why teams, athletes and organizations choose Championship Chains to celebrate their biggest wins.</p></div>
@@ -272,7 +292,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){var it=q.parentElement;q
 document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('show')));
 
 (function(){
-var sel='.section-top,.process-head,.collection-main,.collection-small,.why-sticky,.why-item,.brand-tile,.craft-photo,.craft-copy,.process-step,.product-layout>*,.featured-image,.featured-copy,.compare-card,.story-main,.story-small,.faq-intro,.faq-item,.faq-help,.cta .wrap>*,.footer-top>*';
+var sel='.section-top,.process-head,.collection-main,.collection-small,.why-sticky,.why-item,.brand-tile,.craft-photo,.craft-copy,.process-step,.product-layout>*,.featured-image,.featured-copy,.vs-tile,.story-main,.story-small,.faq-intro,.faq-item,.faq-help,.cta .wrap>*,.footer-top>*';
 var els=[].slice.call(document.querySelectorAll(sel));
 if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
 var seen=new Map();
